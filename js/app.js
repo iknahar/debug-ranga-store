@@ -222,13 +222,13 @@ const showProducts = (products) => {
     <img class="product-image" src=${image}></img>
       </div>
       <h5><b>${product.title}</b></h5>
-      <p>Category: ${product.category}</p>
-      <p>Ratings: ${product.rating.rate} (${product.rating.count} ratings) </p>
+      <p>Category: ${product.category}<br>
+      Ratings: ${product.rating.rate} (${product.rating.count} ratings) </p>
       <h6><b>Price: $ ${product.price}</b></h6>
       <br>
       <br>
       <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now blue-button ">Add to Cart</button>
-      <button onclick="details()" id="details-btn" class="blue-outline">Details</button></div>
+      <button id="details-btn" class="blue-outline">Details</button></div>
       `;
     document.getElementById("all-products").appendChild(div);
   }
@@ -241,10 +241,6 @@ const addToCart = (id, price) => {
   updateTaxAndCharge();
   document.getElementById("total-Products").innerText = count;
   updateTotal();
-};
-
-const details = () => {
-  console.log("Clicking");
 };
 
 const getInputValue = (id) => {
