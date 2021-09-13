@@ -2,6 +2,15 @@ body {
   overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
 }
+
+h6 {
+  background-color: rgb(188, 255, 5);
+  padding: 5px 30px;
+  border-radius: 50px;
+  display: inline-block;
+  font-size: 20px;
+}
+
 .search-field {
   border: none;
   border-radius: 50px;
@@ -19,11 +28,12 @@ body {
   margin: auto;
   margin-top: 50px;
   border-right: none;
+  margin-bottom: 50px;
 }
 .search-button {
   padding: 10px 50px;
   border-radius: 25px;
-  margin-left: 20px;
+  margin-left: 50px;
 }
 #all-products {
   display: grid;
@@ -36,23 +46,30 @@ body {
   justify-content: center;
 }
 .single-product {
-  padding: 10px;
+  padding: 20px;
   transition: 0.6s;
-}
-.single-product:hover {
-  box-shadow: 4px 4px 7px gray;
+  margin: 8px;
   border-radius: 10px;
-  border: 1px solid cyan;
+  border: 1px solid rgba(0, 162, 255, 0.226);
+  height: 400px;
+  overflow: hidden;
+}
+
+.single-product:hover {
+  box-shadow: 5px 6px 21px 10px rgba(195, 204, 255, 0.84);
+  border-radius: 10px;
+  /* border: 1px solid cyan; */
 }
 .product-image {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
+  margin-bottom: 3px;
+  margin-top: 5px;
 }
 .cart {
   width: 350px;
-  /* border: 1px solid green; */
-  padding: 10px;
-  box-shadow: 10px 10px 20px gray;
+  padding: 20px;
+  box-shadow: 0px 0px 20px rgb(192, 203, 255);
   border-radius: 5px;
   margin-right: 30px;
   position: fixed;
@@ -60,6 +77,51 @@ body {
 .cart-main {
   padding-right: 30px;
 }
+
+.blue-button {
+  box-shadow: 0px 10px 22px -7px #8fb6ff;
+  border: none;
+  outline: none;
+  background: linear-gradient(to bottom, #6ec6e6 5%, #3eb5c7 100%);
+  background-color: #6ec6e6;
+  border-radius: 50px;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  padding: 10px 25px;
+  margin-right: 20px;
+}
+.blue-button:hover {
+  background: linear-gradient(to bottom, #5caebb 5%, #2e8eb1 100%);
+  background-color: #147c8b;
+}
+.blue-button:active {
+  position: relative;
+  top: 1px;
+}
+
+.blue-outline {
+  background-color: #ffffff;
+  outline: none;
+  border-radius: 50px;
+  border: 1px solid #29668f;
+  display: inline-block;
+  cursor: pointer;
+  color: #286090;
+  padding: 10px 25px;
+}
+.blue-outline:hover {
+  background-color: #80acff44;
+}
+.blue-outline:active {
+  position: relative;
+  top: 1px;
+}
+
+/* -------------------------------------------
+-------------Media Query ---------------------
+---------------------------------------------*/
+
 @media only screen and (max-width: 768px) {
   #all-products {
     display: grid;
